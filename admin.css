@@ -1,0 +1,56 @@
+/* General Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f8f9fa;
+}
+
+.wrapper {
+    min-height: 100vh;
+    display: flex;
+}
+
+#sidebar {
+    min-width: 200px;
+    transition: all 0.3s ease;
+    background-color: #212529;
+    color: white;
+}
+
+#sidebar.collapsed {
+    width: 70px;
+}
+
+.content {
+    flex-grow: 1;
+    background-color: #f8f9fa;
+    padding: 1rem;
+}
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+.table thead th {
+    background-color: #212529;
+    color: white;
+}
+
+.table td,
+.table th {
+    vertical-align: middle;
+}
+
+@media (max-width: 768px) {
+    #sidebar {
+        width: 70px;
+    }
+    .content {
+        padding: 0.5rem;
+    }
+}
